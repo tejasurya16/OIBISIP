@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature-conveter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        h1{
+           text-transform: uppercase;
+           font-family: 'Times New Roman', Times, serif;
+           font-weight: 200;
+           margin-top: 5px;;
+           font-size: 25px;
+           font-weight: bold ;
+           padding: 50px;
+           margin-left: 65px;
+           text-align: center;
+        }
+        
+        header{
+         
+            background-color: azure;
+            background-color: grey;
+            text-align: center;
+            
+                
+               
+        }
+
+        #one{
+            height: 190px;
+            width: 380px;
+            text-align: center;
+            margin-left: 70px;
+            line-height: 30px;
+        }
+        main{
+            background-color:bisque;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        form{
+            font-family: 'Times New Roman', Times, serif;
+            font-size:x-large;
+            padding: 70px;
+            text-align: center;
+            
+            
+        }
+        #button{
+              margin-left: 20px;
+              background-color: darkgoldenrod;
+              height: 50px;
+              width: 100px;
+              border-radius: 20px;
+                  }
+        #three{
+            margin-left: 20px;
+        }
+        #output{
+            margin-left: 15px;
+            margin-bottom: 10px;
+            height: 20px;
+        }
+        #h3{
+            text-transform: uppercase;
+            margin-left:50px ;
+        }
+        #final{
+            margin-left: 400px;
+            border: ridge;
+            border-radius: 10px;
+            border-color: black;
+            width: 560px;
+            height: 100hv;
+        }
+        #final2{
+            background-image: url("https://as2.ftcdn.net/v2/jpg/03/12/45/55/1000_F_312455568_tAHQVoGYxUzL0rf2oGb6zb6W8XOcDUBx.jpg");            height:400px;
+            height: 800px;
+            background-size: cover;
+        }
+    </style>
+        <script>
+            function convert()
+        {
+        var tempe= document.getElementById("two").value
+        calculate(tempe)
+        }
+        
+        function calculate(tempe)
+        { 
+            if(isNaN(tempe))
+            {
+                alert("not numeric")
+            }
+        if(document.getElementById("kel").checked)
+        {
+            var num1 =eval((tempe- 32) * 5 / 9)
+
+document.getElementById("output").value =num1+"°C"
+
+
+        }
+        else if(document.getElementById("cel").checked)
+           {
+
+            var num =eval((tempe * 9/5)+32)
+
+            document.getElementById("output").value =num+"°F"
+
+           }
+           else{
+                 alert("choose conversation")
+                  return false
+        }
+     }
+
+
+
+
+
+        </script>
+    
+    
+
+    
+</head>
+<body>
+    <div id="final2">
+    <div id="final">
+        <header>
+            <div id ="one">
+                <h1>Temperature convertor </h1>
+            </div>
+        </header>
+        
+
+        <main>
+
+            <form>
+                
+                 Temperature <input type="text" id="two" >
+                
+                 <br>
+                 <br>
+                 <br>
+                 <div id="three">
+                 Celcius<input type="radio" name="Temp" id="cel" >
+                   <br>
+                 Fahrenheit<input type="radio" name="Temp"  id="kel" >
+                </div>
+                 <br>
+                 <input type="button" onclick="convert()" id="button" value="convert">
+
+                 <br>
+                
+                 
+                 <h3>Converted Temperature</h3>
+                 <input type="text" id="output">
+            </form>
+
+        </main>
+        
+    </div>
+    </div>  
+</body>
+</html>
